@@ -27,12 +27,12 @@ C2 = [-sin(tA)*A(1)+ cos(tA)*A(2);
 Pos_navire = C1\C2;
 
 hold on;
-plot(Pos_navire(1),Pos_navire(2));
-plot(A(1),A(2));
+plot(Pos_navire(1),Pos_navire(2), 'rx', 'MarkerSize', 5, 'LineWidth', 2);
+plot(A(1),A(2), 'ko');
 text(A(1) + 0.2, A(2), "Phare 1");
-plot(B(1),B(2));
+plot(B(1),B(2), 'ko');
 text(B(1) + 0.2, B(2), "Phare 2");
-plot(C(1),C(2));
+plot(C(1),C(2), 'ko');
 text(C(1) + 0.2, C(2), "Phare 3");
 text(Pos_navire(1) + 0.2, Pos_navire(2), "Navire");
 axis equal;

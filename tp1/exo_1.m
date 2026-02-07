@@ -33,14 +33,31 @@ for k = 1:n
 end
 
 # max phia 2, min phib 1 donc definie positive -> prod scalaire
-# plot(t,phia);
+figure(1);
+plot(t, phia, 'b-', 'LineWidth', 2);
+grid on;
+title('Graphe de t -> phi_A(u(t), u(t))');
+xlabel('t (radians)');
+ylabel('Valeur de la forme quadratique');
+xlim([0 2*pi]);
 
 # max phia 2, min phib 0 exclu donc definie positive -> pas prod scalaire
-# plot(t,phib);
+figure(2);
+plot(t, phib, 'r-', 'LineWidth', 2);
+grid on;
+title('Graphe de t -> phi_B(u(t), u(t))');
+xlabel('t (radians)');
+ylabel('Valeur de la forme quadratique');
+xlim([0 2*pi]);
 
 # max phia 2, min phib -1 donc non definie positive -> pas prod scalaire;
-# plot(t,phic);
-# grid;
+figure(3);
+plot(t, phic, 'g-', 'LineWidth', 2);
+grid on;
+title('Graphe de t -> phi_C(u(t), u(t))');
+xlabel('t (radians)');
+ylabel('Valeur de la forme quadratique');
+xlim([0 2*pi]);
 
 # Diagonalisation de A,B et C;
 
@@ -50,4 +67,6 @@ end
 
 # On remarque que les valeurs propres sont les maxs et min des fonction,
 # On vois que B a pour valeurs propre -5*10^-25, donc negatif en un point,
-# donc pas definie positive, donc il n'y a que le PHIA qui est un prod scal
+# donc pas definie positive, donc il n'y a que le PHIA qui est un prod scalaire
+
+
