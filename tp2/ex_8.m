@@ -47,7 +47,15 @@ EQM_3 = EQM_3 / 200;
 # EQM_3 = 4.9790
 
 figure(1);
-plot(a2*x + b2,'.');
+hold on;
+plot(x,z,'.');
+plot(x, a2*x + b2);
+grid;
+hold off;
 
 figure(2);
-plot(a3*x +b3, '.');
+hold on;
+plot(y,z, '.')
+plot(y,a3*y +b3);
+grid;
+hold on;
